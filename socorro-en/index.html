@@ -221,6 +221,7 @@ form.addEventListener('submit',async(e)=>{
   btn.disabled=true;statusEl.textContent='Sending…';statusEl.className='status';
   const data={
     source:'socorro-en',
+    src:new URLSearchParams(location.search).get('src')||'',
     firstName:firstName,
     phone:phone,
     email:form.email.value.trim()

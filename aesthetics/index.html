@@ -244,6 +244,7 @@ form.addEventListener('submit',async function(e){
   btn.disabled=true;statusEl.textContent='Sending…';statusEl.className='status';
   var payload={
     source:'nha-en',
+    src:new URLSearchParams(location.search).get('src')||'',
     firstName:form.firstName.value.trim(),
     phone:form.phone.value.trim(),
     email:form.email.value.trim(),
